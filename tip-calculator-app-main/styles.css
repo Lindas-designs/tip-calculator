@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space-Mono", sans-serif;
+}
+:root {
+  /* ### Primary */
+  --green-400: hsl(172, 67%, 45%);
+  /* ### Neutral */
+  --green-900: hsl(183, 100%, 15%);
+  --grey-500: hsl(186, 14%, 43%);
+  --grey-400: hsl(184, 14%, 56%);
+  --grey-200: hsl(185, 41%, 84%);
+  --grey-50: hsl(189, 47%, 97%);
+  --white: hsl(0, 100%, 100%);
+}
+
+/* - Font size (form inputs): 24px */
+
+/* - Weights: 700 */
+
+html {
+  font-size: 62.5%;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px */
+
+/* Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens. */
+/* 
+Your users should be able to:
+
+- View the optimal layout for the app depending on their device's screen size
+- See hover states for all interactive elements on the page
+- Calculate the correct tip and total cost of the bill per person */
