@@ -14,6 +14,8 @@
   --grey-200: hsl(185, 41%, 84%);
   --grey-50: hsl(189, 47%, 97%);
   --white: hsl(0, 100%, 100%);
+  /* Red */
+  --red-50: hsl(2, 44%, 46%);
 }
 
 html {
@@ -33,13 +35,31 @@ html {
 .main-container {
   width: 100%;
   background-color: var(--white);
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 0rem 0rem;
   padding: 2rem;
 }
-
+.section-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.label-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .label-title {
-  display: block;
   color: var(--grey-500);
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+.closed {
+  display: none;
+}
+.err-message {
+  color: var(--red-50);
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
 }
 /* Positioning dollar sign in input field */
 .input {
@@ -67,14 +87,23 @@ input {
   background-color: var(--grey-50);
   border: none;
   outline: none;
-  height: 3rem;
+  height: 4rem;
   color: var(--green-900);
   padding-right: 2rem;
   text-align: right;
   font-weight: 700;
   width: 100%;
+  font-size: 1.75rem;
+}
+input:focus {
+  border: 0.2rem solid var(--green-400);
+  border-radius: 0.5rem;
 }
 
+.err-border {
+  border: 0.2rem solid var(--red-50);
+  border-radius: 0.5rem;
+}
 /* Getting rid of input field arrows in Chrome */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -92,11 +121,40 @@ input::placeholder {
   text-align: right;
   color: var(--grey-400);
 }
-
+.tip-choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.btn-tip {
+  height: 4rem;
+  background-color: var(--green-900);
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.btn-tip:hover {
+  transform: scale(1.05);
+  background-color: var(--grey-200);
+}
+.btn-tip:active {
+  background-color: var(--green-400);
+  transform: scale(1);
+}
+.btn-custom {
+  background-color: var(--grey-50);
+  color: var(--green-900);
+}
+.chosen {
+  background-color: var(--green-400);
+}
 .attribution {
   font-size: 1.1rem;
   text-align: center;
-  position: fixed;
   bottom: 0;
 }
 .attribution a {

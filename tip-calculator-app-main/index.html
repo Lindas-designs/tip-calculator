@@ -33,16 +33,40 @@
       <div class="main-container">
         <div class="section-choice">
           <div class="input-section">
-            <label class="label-title">Bill</label>
+            <div class="label-container">
+              <label class="label-title">Bill</label>
+              <label class="err-message closed">Can't be zero</label>
+            </div>
+
             <label class="input input-bill">
               <input placeholder="0" type="number" id="input-bill" name="bill"
             /></label>
           </div>
-          <div class="tip-section">Select Tip % 5% 10% 15% 25% 50% Custom</div>
+          <div class="tip-section">
+            <label class="label-title">Select Tip %</label>
+            <div class="tip-choices">
+              <button class="btn-tip btn-5%">5%</button>
+              <button class="btn-tip btn-10%">10%</button>
+              <button class="btn-tip btn-15%">15%</button>
+              <button class="btn-tip btn-25%">25%</button>
+              <button class="btn-tip btn-50%">50%</button>
+              <div class="btn-tip btn-custom">
+                <input placeholder="Custom" type="number" name="custom-input" />
+              </div>
+              <!-- <button class="btn-tip btn-custom">Custom</button> -->
+            </div>
+          </div>
           <div class="people-section">
-            <label class="label-title">Number of People</label>
+            <div class="label-container">
+              <label class="label-title">Number of People</label>
+              <label class="err-message closed">Can't be zero</label>
+            </div>
             <label class="input input-people">
-              <input placeholder="0" type="number" id="input-bill" name="bill"
+              <input
+                placeholder="0"
+                type="number"
+                id="input-people"
+                name="bill"
             /></label>
           </div>
         </div>
