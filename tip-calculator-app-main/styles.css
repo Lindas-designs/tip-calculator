@@ -152,6 +152,47 @@ input::placeholder {
 .chosen {
   background-color: var(--green-400);
 }
+.section-results {
+  margin-top: 2rem;
+  width: 100%;
+  background-color: var(--green-900);
+  border-radius: 1rem;
+  padding: 3rem;
+}
+.tip-results {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+.tip-amount,
+.total {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.tip-info {
+  color: var(--white);
+  font-size: 1.25rem;
+}
+.person {
+  color: var(--grey-200);
+}
+output {
+  font-size: 3rem;
+  color: var(--green-400);
+  display: flex;
+  justify-content: end;
+}
+.btn-reset {
+  height: 4rem;
+  background-color: var(--green-400);
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 3rem;
+}
 .attribution {
   font-size: 1.1rem;
   text-align: center;
