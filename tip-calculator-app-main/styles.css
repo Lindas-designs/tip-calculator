@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Space-Mono", sans-serif;
+  font-family: "Space Mono", monospace;
 }
 :root {
   /* ### Primary */
@@ -16,17 +16,88 @@
   --white: hsl(0, 100%, 100%);
 }
 
-/* - Font size (form inputs): 24px */
-
-/* - Weights: 700 */
-
 html {
   font-size: 62.5%;
+  font-weight: 700;
+}
+.background-container {
+  width: 100%;
+
+  background-color: var(--grey-200);
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 3rem;
+}
+.main-container {
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.label-title {
+  display: block;
+  color: var(--grey-500);
+}
+/* Positioning dollar sign in input field */
+.input {
+  position: relative;
+}
+
+.input:before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 0.75rem;
+}
+.input-bill:before {
+  background: url("/tip-calculator-app-main/images/icon-dollar.svg") center /
+    contain no-repeat;
+}
+.input-people:before {
+  background: url("/tip-calculator-app-main/images/icon-person.svg") center /
+    contain no-repeat;
+}
+
+input {
+  background-color: var(--grey-50);
+  border: none;
+  outline: none;
+  height: 3rem;
+  color: var(--green-900);
+  padding-right: 2rem;
+  text-align: right;
+  font-weight: 700;
+  width: 100%;
+}
+
+/* Getting rid of input field arrows in Chrome */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Getting rid of input field arrows in Firefox*/
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+/* Aligning placeholder to the right side of input field */
+input::placeholder {
+  text-align: right;
+  color: var(--grey-400);
 }
 
 .attribution {
   font-size: 1.1rem;
   text-align: center;
+  position: fixed;
+  bottom: 0;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -44,3 +115,7 @@ Your users should be able to:
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person */
+
+/* - Font size (form inputs): 24px */
+
+/* - Weights: 700 */
