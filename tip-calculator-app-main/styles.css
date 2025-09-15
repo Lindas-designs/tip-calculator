@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Space Mono", monospace;
 }
+
+*:focus-visible {
+  box-shadow: 0 0 0 0.1rem #fff, 0 0 0 0.5rem var(--green-400);
+}
 :root {
   /* ### Primary */
   --green-400: hsl(172, 67%, 45%);
@@ -125,6 +129,7 @@ input::placeholder {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  margin-top: 1rem;
 }
 .btn-tip {
   height: 4rem;
@@ -136,14 +141,13 @@ input::placeholder {
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.5s;
 }
 .btn-tip:hover {
-  transform: scale(1.05);
   background-color: var(--grey-200);
 }
 .btn-tip:active {
   background-color: var(--green-400);
-  transform: scale(1);
 }
 .btn-custom {
   background-color: var(--grey-50);
