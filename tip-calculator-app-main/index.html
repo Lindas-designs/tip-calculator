@@ -35,7 +35,9 @@
           <div class="input-section">
             <div class="label-container">
               <label class="label-title">Bill</label>
-              <label class="err-message closed">Can't be zero</label>
+              <label class="err-message err-bill closed"
+                >Must be a valid number</label
+              >
             </div>
 
             <label class="input input-bill">
@@ -45,11 +47,11 @@
           <div class="tip-section">
             <label class="label-title">Select Tip %</label>
             <div class="tip-choices">
-              <button class="btn-tip btn-5%">5%</button>
-              <button class="btn-tip btn-10%">10%</button>
-              <button class="btn-tip btn-15%">15%</button>
-              <button class="btn-tip btn-25%">25%</button>
-              <button class="btn-tip btn-50%">50%</button>
+              <button class="btn-tip btn-percent">5%</button>
+              <button class="btn-tip btn-percent">10%</button>
+              <button class="btn-tip btn-percent">15%</button>
+              <button class="btn-tip btn-percent">25%</button>
+              <button class="btn-tip btn-percent">50%</button>
               <div class="btn-tip btn-custom">
                 <input placeholder="Custom" type="number" name="custom-input" />
               </div>
@@ -58,7 +60,7 @@
           <div class="people-section">
             <div class="label-container">
               <label class="label-title">Number of People</label>
-              <label class="err-message closed">Can't be zero</label>
+              <label class="err-message err-people closed">Can't be zero</label>
             </div>
             <label class="input input-people">
               <input

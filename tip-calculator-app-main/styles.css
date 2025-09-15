@@ -146,7 +146,10 @@ input::placeholder {
 .btn-tip:hover {
   background-color: var(--grey-200);
 }
-.btn-tip:active {
+.btn-tip.active:hover {
+  background-color: var(--green-400);
+}
+.active {
   background-color: var(--green-400);
 }
 .btn-custom {
@@ -196,6 +199,16 @@ output {
   border-radius: 0.5rem;
   width: 100%;
   margin-top: 3rem;
+  cursor: pointer;
+}
+.btn-reset:hover {
+  background-color: var(--grey-200);
+}
+.btn-reset:active {
+  background-color: var(--green-400);
+  box-shadow: inset 0 0 0.5rem 0.5rem var(--grey-500);
+  transform: scale(0.95);
+  font-size: 1.25rem;
 }
 .attribution {
   font-size: 1.1rem;
