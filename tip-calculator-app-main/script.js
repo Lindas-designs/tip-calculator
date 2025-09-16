@@ -32,6 +32,15 @@ function testPeopleInput(variable) {
 }
 
 resetBtn.addEventListener("click", function (e) {
+  let selectedTip;
+  buttons.forEach((button) => {
+    // getting tip value if one of buttons is active
+    button.classList.contains("active") &&
+      (selectedTip = Number(button.textContent.replace("%", "")));
+  });
+  // getting tip value if it is written in input field
+  btnCustom.value && (selectedTip = btnCustom.value);
+  console.log(selectedTip);
   const billValue = billInput.value;
   const peopleValue = peopleInput.value;
   let billIsTrue;
@@ -48,4 +57,7 @@ resetBtn.addEventListener("click", function (e) {
   } else if (peopleIsTrue) {
     errMessagePeople.classList.add("closed");
   }
+  selectedTip && billIsTrue && peopleIsTrue && console.log("it works, yaya!");
 });
+
+// nepieciešams arī custom field uztaisīt, lai tikai veselus skaitļus pieņem
