@@ -6,6 +6,8 @@ const btnCustom = document.getElementById("btn-custom");
 const errMessageBill = document.querySelector(".err-bill");
 const errMessagePeople = document.querySelector(".err-people");
 const resetBtn = document.querySelector(".btn-reset");
+const tipPerson = document.querySelector(".tip-person");
+const totalPerson = document.querySelector(".total-person");
 
 buttons.forEach((button) =>
   button.addEventListener("click", function (e) {
@@ -40,7 +42,6 @@ resetBtn.addEventListener("click", function (e) {
   });
   // getting tip value if it is written in input field
   btnCustom.value && (selectedTip = btnCustom.value);
-  console.log(selectedTip);
   const billValue = billInput.value;
   const peopleValue = peopleInput.value;
   let billIsTrue;
@@ -57,7 +58,17 @@ resetBtn.addEventListener("click", function (e) {
   } else if (peopleIsTrue) {
     errMessagePeople.classList.add("closed");
   }
-  selectedTip && billIsTrue && peopleIsTrue && console.log("it works, yaya!");
+  //Showing calculation results and clearing inputs
+  if (selectedTip && billIsTrue && peopleIsTrue) {
+    //Showing result calculations:
+    tipPerson.value = `$${
+      Math.round((((selectedTip / 100) * billValue) / peopleValue) * 100) / 100
+    }`;
+    totalPerson.value = `$${
+      Math.round(
+        (((selectedTip / 100) * billValue + Number(billValue)) / peopleValue) *
+          100
+      ) / 100
+    }`;
+  }
 });
-
-// nepieciešams arī custom field uztaisīt, lai tikai veselus skaitļus pieņem
