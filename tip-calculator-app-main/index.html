@@ -53,14 +53,21 @@
               <button class="btn-tip btn-percent">25%</button>
               <button class="btn-tip btn-percent">50%</button>
               <div class="btn-tip btn-custom">
-                <input placeholder="Custom" type="number" name="custom-input" />
+                <input
+                  placeholder="Custom"
+                  type="number"
+                  name="custom-input"
+                  id="btn-custom"
+                />
               </div>
             </div>
           </div>
           <div class="people-section">
             <div class="label-container">
               <label class="label-title">Number of People</label>
-              <label class="err-message err-people closed">Can't be zero</label>
+              <label class="err-message err-people closed"
+                >Must be a valid number</label
+              >
             </div>
             <label class="input input-people">
               <input
