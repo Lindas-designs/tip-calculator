@@ -36,6 +36,10 @@ html {
   justify-content: center;
   padding: 3rem 0 3rem;
 }
+.logo-img {
+  width: 8rem;
+  height: auto;
+}
 .main-container {
   width: 100%;
   background-color: var(--white);
@@ -218,20 +222,3 @@ output {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-/* The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px */
-
-/* Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens. */
-/* 
-Your users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Calculate the correct tip and total cost of the bill per person */
-
-/* - Font size (form inputs): 24px */
-
-/* - Weights: 700 */
